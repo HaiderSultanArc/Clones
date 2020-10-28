@@ -1,0 +1,28 @@
+.post {
+    background-color: white;
+    max-width: 500px;   /* This sets the maximum possible width of container on the screen */
+    border: 1px solid lightgray;    /* Adds a Border around the edges of the container */
+    margin-bottom: 45px;    /* Adds a margin at the bottom of the container */
+}
+
+.post__image {
+    width: 100%;    /* This make the width of container equal to the width of screen */
+    object-fit: contain;    /* This keeps the aspect-ration of the container, regardless of how large the parent div gets */
+    border-top: 1px solid lightgray;    /* Adds a Border on top edges of the container */
+    border-bottom: 1px solid lightgray; /* Adds a Border on bottom edges of the container */
+}
+
+.post__text {
+    font-weight: normal;    /* This sets the font-weight to normal */
+    padding: 20px;  /* Add margin from inside the border of the container */
+}
+
+.post__header {
+    display: flex;  /* This aligns all the components of the container in a Flex or so to say Row */
+    align-items: center;    /* This aligns all the components of the container at the center of the container */
+    padding: 20px;
+}
+
+.post__avatar {
+    margin-right: 10px; /* This adds margin on the right side of the container */
+}
