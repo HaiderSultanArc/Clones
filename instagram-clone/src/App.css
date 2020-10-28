@@ -3,13 +3,18 @@
 }
 
 .app {
-  background-color: #fafafa;      /* This sets the background of the container*/
-  /* height: 100vh;      /* This means that the height of this container is 100% of the viewport height, it basically expands the container in all the available space on page */
+  background-color: #fafafa;  /* This sets the background of the container*/
+  /* height: 100vh; /* This means that the height of this container is 100% of the viewport height, it basically expands the container in all the available space on page */
 }
 
 .app__header {
   background-color: white;  /* Adds a Border around the edges of the container */
   padding: 20px;      /* Add margin from inside the border of the container */
   border-bottom: 1px solid lightgray;
-  object-fit: contain;      /* This keeps the aspect-ration of the container, regardless of how large the parent div gets */
+  object-fit: contain;  /* This keeps the aspect-ration of the container, regardless of how large the parent div gets */
+}
+
+.app__signup {
+  display: flex;  /* It will align everything of the container in a Flex or so to say a Row */
+  flex-direction: column; /* It will change the direction of the Flex to the Column, so everthing in the Container will be aligned in a Column */
 }
