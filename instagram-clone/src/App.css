@@ -1,5 +1,5 @@
 * {
-  margin: 0
+  margin: 0 /* Sets the margin */
 }
 
 .app {
@@ -8,10 +8,29 @@
 }
 
 .app__header {
+  position: sticky; /* It sticks the Position of the Container */
+  top: 0; /* Position of the Container on the Screen */
+  z-index: 1;
   background-color: white;  /* Adds a Border around the edges of the container */
   padding: 20px;      /* Add margin from inside the border of the container */
   border-bottom: 1px solid lightgray;
   object-fit: contain;  /* This keeps the aspect-ration of the container, regardless of how large the parent div gets */
+  display: flex;  /* It will align everything of the container in a Flex or so to say a Row */
+  justify-content: space-between; /* Space between all the Elements */
+}
+
+.app__headerImage {
+  object-fit: contain;  /* This keeps the aspect-ration of the container, regardless of how large the parent div gets */
+}
+
+.app__posts {
+  padding: 20px;  /* Add margin from inside the border of the container */
+  display: flex;  /* It will align everything of the container in a Flex or so to say a Row */
+  justify-content: center;  /* Justify the content to the center */
+}
+
+.app__postsRight {
+  margin-left: 20px;
 }
 
 .app__signup {

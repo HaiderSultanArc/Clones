@@ -26,3 +26,27 @@
 .post__avatar {
     margin-right: 10px; /* This adds margin on the right side of the container */
 }
+
+.post__commentBox {
+    display: flex;
+    margin-top: 10px;
+}
+
+.post__comments {
+    padding: 20px;
+}
+
+.post__input {
+    flex: 1;    /* Container Should Take maximum place in the Flex */
+    border: none;   /* No Border */
+    padding: 10px;   /* Add Margin From inside the boundary of Container */
+    border-top: 1px solid lightgray;    /* Top Border attributes */
+}
+
+.post__button {
+    flex: 0;    /* Container Should Take minimum place in the Flex */
+    border: none;   /* No Border */
+    color: #6082a3;
+    background-color: transparent;  /* Background Transparent */
+    border-top: 1px solid lightgray;    /* Top Border attributes */
+}
