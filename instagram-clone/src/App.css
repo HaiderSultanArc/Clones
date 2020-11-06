@@ -12,7 +12,10 @@
   top: 0; /* Position of the Container on the Screen */
   z-index: 1;
   background-color: white;  /* Adds a Border around the edges of the container */
-  padding: 20px;      /* Add margin from inside the border of the container */
+  padding-top: 12px;      /* Add margin from inside the border of the container */
+  padding-bottom: 4px;
+  padding-left: 164px;
+  padding-right: 164px;
   border-bottom: 1px solid lightgray;
   object-fit: contain;  /* This keeps the aspect-ration of the container, regardless of how large the parent div gets */
   display: flex;  /* It will align everything of the container in a Flex or so to say a Row */
@@ -21,6 +24,7 @@
 
 .app__headerImage {
   object-fit: contain;  /* This keeps the aspect-ration of the container, regardless of how large the parent div gets */
+  /*margin-left: 200px;*/
 }
 
 .app__posts {
@@ -30,7 +34,18 @@
 }
 
 .app__postsRight {
-  margin-left: 20px;
+  margin-left: 30px;
+  padding: 20px;
+  max-width: 280px;
+}
+
+.app__user {
+  display: flex;
+  align-items: center;
+}
+
+.app__userButton {
+  margin-left: 80px;
 }
 
 .app__signup {

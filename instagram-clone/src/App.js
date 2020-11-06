@@ -4,9 +4,8 @@ import Post from './Post';
 import {auth, db} from './firebase';
 import {makeStyles} from '@material-ui/core/styles'
 import Modal from '@material-ui/core/Modal';
-import { Button, Input } from '@material-ui/core';
+import { Avatar, Button, Input } from '@material-ui/core';
 import ImageUpload from './ImageUpload';
-import InstagramEmbed from 'react-instagram-embed';
 
 
 // This all material UI styling copied from Site
@@ -156,28 +155,34 @@ function App() {
           }
         </div>
 
-        <div className="app__postsRight">
-          <InstagramEmbed
-            url='https://instagr.am/p/Zw9o4/'
-            maxWidth={320}
-            hideCaption={false}
-            containerTagName='div'
-            protocol=''
-            injectScript
-            onLoading={() => {}}
-            onSuccess={() => {}}
-            onAfterRender={() => {}}
-            onFailure={() => {}}
-          />
-        </div>
+        {
+          user?.displayName? (
+            <div className="app__postsRight">
+              <div className="app__user">
+                <Avatar className="post__avatar" alt={user.displayName} src="/static/images/avatar/1.jpg" />
+                <text className="post__username">{user.displayName}</text>
+                <div className="app__userButton">
+                  <Button onClick={() => auth.signOut()}>Logout</Button>
+                </div>
+              </div>
+            </div>
+          ): (
+              <div className="app__postsRight">
+                <div className="app__user">
+                  <Avatar className="post__avatar" alt="" src="/static/images/avatar/1.jpg" />
+                  <text className="post__username">Please Login</text>
+                </div>
+              </div>
+          )
+        }
       </div>
 
       {
-        user?.displayName ? (  // user? is an optional, it says if user don't exist then don't apply this condition
+        user?.displayName? (  // user? is an optional, it says if user don't exist then don't apply this condition
           <ImageUpload username={user.displayName} /> // Render the ImageUpload
-        ) : (
+        ): (
             <h3>Sorry you need to Login to Upload</h3>  // If user is not logged in then print a msg
-          )
+        )
       } 
     </div>
   );

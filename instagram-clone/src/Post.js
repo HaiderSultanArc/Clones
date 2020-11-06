@@ -3,10 +3,12 @@ import './Post.css';
 import { db } from './firebase';
 import Avatar from "@material-ui/core/Avatar";
 import firebase from 'firebase';
+import { Button } from '@material-ui/core';
 
 function Post({ postId, user, username, caption, imageUrl }) {
     const [comments, setComments] = useState([]);
     const [comment, setComment] = useState('');
+    const [likes, setLike] = useState(0);
 
     useEffect(() => {
         let unsubscribe;
@@ -38,13 +40,17 @@ function Post({ postId, user, username, caption, imageUrl }) {
     return (
         <div className="post">
             <div className="post__header">
-                <Avatar className="post__avatar" alt="Haider Sultan" src="/static/images/avatar/1.jpg" />
-                <h3>{username}</h3>
+                <Avatar className="post__avatar" alt={username} src="/static/images/avatar/1.jpg" />
+                <text className="post__username">{username}</text>
             </div>
 
             <img className="post__image" src={imageUrl} alt="" />
 
-            <h4 className="post__text"><strong>{username}</strong>{caption}</h4>
+            <div className="post__likes">
+                <img src='./assets/like.png' alt="Like" />
+            </div>
+
+            <div className="post__text"><text className="post__username">{username}</text><text className="post__caption">{caption}</text></div>
 
             <div className="post__comments">
                 {
@@ -60,7 +66,7 @@ function Post({ postId, user, username, caption, imageUrl }) {
                 user && (
                     <form className="post__commentBox">
                         <input className="post__input" type="text" placeholder="Add a Comment..." value={comment} onChange={(e) => setComment(e.target.value)} />
-                        <button disabled={!comment} className="post__button" type="submit" onClick={postComment}>Post</button>
+                        <button disabled={!comment} className="post__button" type="submit" onClick={postComment}><strong>Post</strong></button>
                     </form>
                 )
             }
