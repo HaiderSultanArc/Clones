@@ -1,0 +1,19 @@
+.message {
+    padding: 10px;  /* Adds margin from inside the boudary of the container to the content */
+    margin: 10px;   /* Adds a margin from outside the boudary of container to the other containers */
+    width: fit-content; /* Sets the width of the Container to fit the content inside */
+}
+
+.message__user {
+    margin-left: auto;  /* push the margin to the left */
+    color: white;   /* forgroud color */
+}
+
+.message__userCard {
+    background-color: #0b81ff !important;
+    text-align: left !important;    /* align the text to the left and it's important to follow */
+}
+
+.message__guestCard {
+    background-color: #e9e9eb;
+}
