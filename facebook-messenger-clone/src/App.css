@@ -1,38 +1,40 @@
+* {
+  margin: 0;
+}
+
 .App {
-  text-align: center;
+  text-align: center; /* Aligns text in the center of container */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app__icon {
+  position: relative; /* Sets the position of the container relative to others */
+  object-fit: contain;  /* Sets the object size to contain so that objects remains same size no matter whats the size of container */
+  margin: 20px; /* Adds margin from boudary of container to other containers */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app__messagesArea {
+  margin-bottom: 160px; /* Adds margin from boudary of container to other containers */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.app__form {
+  padding: 20px;  /* Adding margin from inside of the border of container to the componenets of container */
+  position: fixed;  /* Fix the position of contianer in the parent contianer */
+  bottom: 0;  /* Sets the position of the container in the parent container */
+  z-index: 1; /* Sets the Z axis, basically tells to render it in front of contianers with lesser value of z-index */
+  width: 94%;  /* Sets width of the container to be 100% of the parent container */
+  background-color: #e9e9eb;  /* Set the background color of the container */
+  margin: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.app__formControl {
+  display: flex !important;
+  flex-direction: row !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app__iconButton {
+  flex: 0;  /* Sets precedence of the container in the parent flex container to be 0 (minimum) */
+}
+
+.app__input {
+  flex: 1;  /* Sets precedence of the container in the parent flex container to be 1 (maximum) */
 }

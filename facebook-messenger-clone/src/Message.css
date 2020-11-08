@@ -6,14 +6,16 @@
 
 .message__user {
     margin-left: auto;  /* push the margin to the left */
-    color: white;   /* forgroud color */
 }
 
 .message__userCard {
-    background-color: #0b81ff !important;
+    color: white !important;   /* forgroud color */
+    background-color: #0282FF !important;
     text-align: left !important;    /* align the text to the left and it's important to follow */
+    border-radius: 25px !important;
 }
 
 .message__guestCard {
-    background-color: #e9e9eb;
+    background-color: #e9e9eb !important;
+    border-radius: 25px !important;
 }
