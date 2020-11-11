@@ -1,0 +1,31 @@
+.nav {
+    position: fixed;    /* Fix the position of the container on the screem */
+    top: 0;     /* Set position of the Container */
+    display: flex;      /* Change display of Container to flex */
+    width: 100%;    /* Set width of container to be 100% of screen */
+    height: 30px;   /* Set height of the Container */
+    z-index: 1;     /* Set priority in Z-Axis */
+    padding: 20px;  /* Add margin from inside the boundary of container to the content of the container */
+    justify-content: space-between;     /* Justify content by spacing in between them */
+
+    transition-timing-function: ease-in;    /* Handle the transition as ease-in */
+    transition: all 0.5s;   /* Timing of all the transition on container */
+}
+
+.nav__black {
+    background-color: #111;     /* Set background Color */
+}
+
+.nav__logo {
+    position: fixed;    /* Fix the position of the container on the screem */
+    left: 20px;     /* Set position of the Container */
+    width: 80px;    /* Set width of container to be 100% of screen */
+    object-fit: contain;    /* Keep the aspect ratio of the objects inside the container regardless of size or shape of container */
+}
+
+.nav__avatar {
+    position: fixed;    /* Fix the position of the container on the screem */
+    right: 20px;       /* Set position of the Container */
+    width: 30px;    /* Set width of container to be 100% of screen */
+    object-fit: contain;    /* Keep the aspect ratio of the objects inside the container regardless of size or shape of container */
+}

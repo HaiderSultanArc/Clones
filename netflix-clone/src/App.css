@@ -1,0 +1,7 @@
+* {   /* Applies to the whole screen */
+  margin: 0;  /* Removes all the margins around the container */
+}
+
+.app {
+  background-color: #111;
+}

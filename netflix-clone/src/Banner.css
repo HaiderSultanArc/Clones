@@ -1,0 +1,57 @@
+.banner {
+    color: white;   /* Set a Color for forground of the container */
+    object-fit: contain;    /* Keep the aspect ratio of the objects inside the container regardless of size or shape of container */
+    height: 448px;      /* Set the height of the container */
+}
+
+.banner__contents {
+    margin-left: 30px;  /* Add margin on left side of container */
+    padding-top: 140px;     /* Add margin from inside bottom the boundary of container to the content of the container */
+    height: 190px;      /* Set the height of the container */
+}
+
+.banner__title {
+    font-size: 3rem;    /* Set size of Font */
+    font-weight: 800;   /* Set the weight of font */
+    padding-bottom: 0.3rem;     /* Add margin from inside bottom the boundary of container to the content of the container */
+}
+
+.banner__description {
+    width: 45rem;   /* Set width of Container */
+    line-height: 1.3;   /* Set height of the Line */
+    padding-top: 1rem;  /* Add margin from inside top the boundary of container to the content of the container */
+    font-size: 0.8rem;  /* Set size of Font */
+    max-width: 360px;   /* Set the max-width of the container */
+    height: 80px;   /* Set the height of the container */
+}
+
+.banner__button {
+    cursor: pointer;    /* Change cursor to the pointer in container */
+    color: #fff;    /* Set foreground color of the container */
+    outline: none;  /* Set outline of the Container to none to make them not visible */
+    border: none;   /* Set border of the Container to none to make them not visible */
+    font-weight: 700;   /* Set Font Weight of the Container */
+    border-radius: 0.2vw;   /* Set border radius of the Container to make them round */
+    padding-left: 2rem;     /* Add margin from inside left the boundary of container to the content of the container */
+    padding-right: 2rem;    /* Add margin from inside right the boundary of container to the content of the container */
+    padding-top: 0.5rem;    /* Add margin from inside top the boundary of container to the content of the container */
+    padding-bottom: 0.5rem;     /* Add margin from inside bottom the boundary of container to the content of the container */
+    margin-right: 1rem;     /* Add margin to the right of the Container */
+    background-color: rgba(51, 51, 51, 0.5);    /* Set Background Color of the Container */
+}
+
+.banner__button:hover {
+    color: #000;    /* Set foreground color of the Container */
+    background-color: #e6e6e6;      /* Set background color of the Container */
+    transition: all 0.2s;   /* Sets time of all the transitions to 0.2 sec */
+}
+
+.banner--fadeBottom {
+    height: 7.4rem;     /* Set height of the container */
+    background-image: linear-gradient(      /* Add background Image to linear-gradient */
+        180deg,     /* Gredient angle is 180 degree */
+        transparent,    /* Gredient is transparent */
+        rgba(37, 37, 37, 0.61),     /* Starting color of gradient */
+        #111       /* Ending color of gradient */
+    );
+}
