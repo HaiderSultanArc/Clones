@@ -1,0 +1,28 @@
+.app__posts {
+    padding: 20px;  /* Add margin from inside the border of the container */
+    display: flex;  /* It will align everything of the container in a Flex or so to say a Row */
+    justify-content: center;  /* Justify the content to the center */
+    
+    .app__postsRight {
+        margin-left: 30px;
+        max-width: 300px;
+        padding-top: 30px;
+        
+        .app__user {
+            display: flex;
+            align-items: center;
+            
+            width: 300px;
+            
+            justify-content: space-between;
+            
+            .post__username {
+                flex: 1;
+                
+                margin-left: 15px;
+                font-weight: 550;
+                font-size: 14px;
+            }
+        }
+    }
+}

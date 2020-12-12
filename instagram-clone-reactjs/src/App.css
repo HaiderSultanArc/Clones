@@ -1,54 +1,305 @@
+.post {
+  background-color: white;
+  max-width: 610px;
+  /* This sets the maximum possible width of container on the screen */
+  border: 1px solid lightgray;
+  /* Adds a Border around the edges of the container */
+  margin-bottom: 60px;
+  /* Adds a margin at the bottom of the container */
+  border-radius: 0.5%;
+}
+
+.post .post__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* This aligns all the components of the container in a Flex or so to say Row */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* This aligns all the components of the container at the center of the container */
+  padding-left: 20px;
+  padding: 10px;
+}
+
+.post .post__header .post__avatar {
+  size: 0px;
+  /*margin-right: 10px; /* This adds margin on the right side of the container */
+}
+
+.post .post__header .post__username {
+  margin-left: 15px;
+  font-weight: 550;
+  font-size: 14px;
+}
+
+.post .post__image {
+  width: 100%;
+  /* This make the width of container equal to the width of screen */
+  -o-object-fit: contain;
+     object-fit: contain;
+  /* This keeps the aspect-ration of the container, regardless of how large the parent div gets */
+  border-top: 1px solid lightgray;
+  /* Adds a Border on top edges of the container */
+  border-bottom: 1px solid lightgray;
+  /* Adds a Border on bottom edges of the container */
+}
+
+.post .post__public {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 15px;
+}
+
+.post .post__public .post__publicButtons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.post .post__public .post__publicButtons .post__likeButton, .post .post__public .post__publicButtons .post__likeButtonPressed {
+  font-size: 30px;
+  color: #5b5b5b;
+}
+
+.post .post__public .post__publicButtons .post__likeButton:hover, .post .post__public .post__publicButtons .post__likeButtonPressed:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+.post .post__public .post__publicButtons .post__likeButtonPressed {
+  color: #ed4956;
+}
+
+.post .post__public .post__likes {
+  margin-left: 10px;
+}
+
+.post .post__text {
+  margin-top: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: normal;
+  /* This sets the font-weight to normal */
+  margin-left: 15px;
+  /* Add margin from inside the border of the container */
+  font-size: 14px;
+}
+
+.post .post__text .post__username {
+  font-weight: 550;
+}
+
+.post .post__text .post__caption {
+  margin-left: 5px;
+}
+
+.post .post__numOfComments {
+  color: #8e8e8e;
+  font-size: 14px;
+  margin-left: 15px;
+  margin-top: 5px;
+}
+
+.post .post__comments {
+  margin-top: 5px;
+  margin-left: 15px;
+  font-size: 14px;
+}
+
+.post .post__comments .post__commentUsername {
+  margin-right: 5px;
+  font-weight: 550;
+}
+
+.post .post__commentBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 15px;
+}
+
+.post .post__commentBox .post__input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  /* Container Should Take maximum place in the Flex */
+  border: none;
+  /* No Border */
+  padding: 20px;
+  /* Add Margin From inside the boundary of Container */
+  border-top: 1px solid lightgray;
+  /* Top Border attributes */
+}
+
+.post .post__commentBox .post__input::-webkit-input-placeholder {
+  color: #cdc2c2;
+  font-size: 14px;
+}
+
+.post .post__commentBox .post__input:-ms-input-placeholder {
+  color: #cdc2c2;
+  font-size: 14px;
+}
+
+.post .post__commentBox .post__input::-ms-input-placeholder {
+  color: #cdc2c2;
+  font-size: 14px;
+}
+
+.post .post__commentBox .post__input::placeholder {
+  color: #cdc2c2;
+  font-size: 14px;
+}
+
+.post .post__commentBox .post__button {
+  -webkit-box-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
+  /* Container Should Take minimum place in the Flex */
+  border: none;
+  /* No Border */
+  color: #2079d35e;
+  background-color: transparent;
+  /* Background Transparent */
+  border-top: 1px solid lightgray;
+  /* Top Border attributes */
+  padding-right: 15px;
+  cursor: pointer;
+}
+
+.app__posts {
+  padding: 20px;
+  /* Add margin from inside the border of the container */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* It will align everything of the container in a Flex or so to say a Row */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* Justify the content to the center */
+}
+
+.app__posts .app__postsRight {
+  margin-left: 30px;
+  max-width: 300px;
+  padding-top: 30px;
+}
+
+.app__posts .app__postsRight .app__user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 300px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.app__posts .app__postsRight .app__user .post__username {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-left: 15px;
+  font-weight: 550;
+  font-size: 14px;
+}
+
+.imageupload {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* Aligns everything in a Flex or Row */
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /* Change the default direction of the Flex from Row to Column */
+  width: 60%;
+  /* Sets the Width of the container */
+  margin-left: auto;
+  /* Detects margin on the left and align the content accordingly (Use with margin-right to center the content) */
+  margin-right: auto;
+  /* Detects margin on the right and align the content accordingly (Use with margin-left to center the content) */
+  margin-top: 10px;
+  /* sets margin from top */
+  margin-bottom: 10px;
+  /* sets margin from top */
+  /* position: fixed;    /* Fix the Position of the Container on the Screen */
+  /* bottom: 0;  /* Sets the Position of the Container on the Screen */
+}
+
+.imageupload__progress {
+  width: 100%;
+  /* Sets the Width of the container */
+}
+
 * {
-  margin: 0 /* Sets the margin */
+  margin: 0;
 }
 
 .app {
-  background-color: #fafafa;  /* This sets the background of the container*/
+  background-color: #fafafa;
+  /* This sets the background of the container*/
   /* height: 100vh; /* This means that the height of this container is 100% of the viewport height, it basically expands the container in all the available space on page */
 }
 
 .app__header {
-  position: sticky; /* It sticks the Position of the Container */
-  top: 0; /* Position of the Container on the Screen */
+  position: -webkit-sticky;
+  position: sticky;
+  /* It sticks the Position of the Container */
+  top: 0;
+  /* Position of the Container on the Screen */
   z-index: 1;
-  background-color: white;  /* Adds a Border around the edges of the container */
-  padding-top: 12px;      /* Add margin from inside the border of the container */
+  background-color: white;
+  /* Adds a Border around the edges of the container */
+  padding-top: 12px;
+  /* Add margin from inside the border of the container */
   padding-bottom: 4px;
   padding-left: 164px;
   padding-right: 164px;
   border-bottom: 1px solid lightgray;
-  object-fit: contain;  /* This keeps the aspect-ration of the container, regardless of how large the parent div gets */
-  display: flex;  /* It will align everything of the container in a Flex or so to say a Row */
-  justify-content: space-between; /* Space between all the Elements */
+  -o-object-fit: contain;
+     object-fit: contain;
+  /* This keeps the aspect-ration of the container, regardless of how large the parent div gets */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* It will align everything of the container in a Flex or so to say a Row */
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  /* Space between all the Elements */
 }
 
 .app__headerImage {
-  object-fit: contain;  /* This keeps the aspect-ration of the container, regardless of how large the parent div gets */
+  -o-object-fit: contain;
+     object-fit: contain;
+  /* This keeps the aspect-ration of the container, regardless of how large the parent div gets */
   /*margin-left: 200px;*/
 }
 
-.app__posts {
-  padding: 20px;  /* Add margin from inside the border of the container */
-  display: flex;  /* It will align everything of the container in a Flex or so to say a Row */
-  justify-content: center;  /* Justify the content to the center */
-}
-
-.app__postsRight {
-  margin-left: 30px;
-  padding: 20px;
-  max-width: 280px;
-}
-
-.app__user {
-  display: flex;
-  align-items: center;
-}
-
-.app__userButton {
-  margin-left: 80px;
-}
-
 .app__signup {
-  display: flex;  /* It will align everything of the container in a Flex or so to say a Row */
-  flex-direction: column; /* It will change the direction of the Flex to the Column, so everthing in the Container will be aligned in a Column */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* It will align everything of the container in a Flex or so to say a Row */
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /* It will change the direction of the Flex to the Column, so everthing in the Container will be aligned in a Column */
 }
+/*# sourceMappingURL=App.css.map */

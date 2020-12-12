@@ -1,13 +1,12 @@
-import firebase from 'firebase';
 import { Button } from '@material-ui/core';
+import firebase from 'firebase';
 import React, { useState } from 'react';
-import { storage, db } from './firebase'
-import './ImageUpload.css';
- 
+import { db, storage } from './firebase';
+
 function ImageUpload({username}) {
     const [caption, setCaption] = useState('');
     const [image, setImage] = useState(null);
-    const [url, setURL] = useState('');
+    // const [url, setURL] = useState('');
     const [progress, setProgress] = useState(0);
 
     const handleChange = (e) => {   // handleChange is the function that fireoff an event that uploads the file

@@ -1,0 +1,125 @@
+.post {
+    background-color: white;
+    max-width: 610px;   /* This sets the maximum possible width of container on the screen */
+    border: 1px solid lightgray;    /* Adds a Border around the edges of the container */
+    margin-bottom: 60px;    /* Adds a margin at the bottom of the container */
+    border-radius: 0.5%;
+    
+    .post__header {
+        display: flex;  /* This aligns all the components of the container in a Flex or so to say Row */
+        align-items: center;    /* This aligns all the components of the container at the center of the container */
+        padding-left: 20px;
+        padding: 10px;
+        
+        .post__avatar {
+            size: 0px;
+            /*margin-right: 10px; /* This adds margin on the right side of the container */
+        }
+        
+        .post__username {
+            margin-left: 15px;
+            font-weight: 550;
+            font-size: 14px;
+        }
+    }
+    
+    .post__image {
+        width: 100%;    /* This make the width of container equal to the width of screen */
+        object-fit: contain;    /* This keeps the aspect-ration of the container, regardless of how large the parent div gets */
+        border-top: 1px solid lightgray;    /* Adds a Border on top edges of the container */
+        border-bottom: 1px solid lightgray; /* Adds a Border on bottom edges of the container */
+    }
+    
+    .post__public {
+        display: flex;
+        flex-direction: column;
+        margin-left: 15px;
+        
+        .post__publicButtons {
+            display: flex;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            
+            .post__likeButton {
+                font-size: 30px;
+                color: #5b5b5b;
+                
+                &:hover {
+                    background-color: white;
+                    cursor: pointer;
+                }
+            }
+            
+            .post__likeButtonPressed {
+                @extend .post__likeButton;
+                
+                color: #ed4956;
+            }
+        }
+        
+        .post__likes {
+            margin-left: 10px;
+        }
+    }
+    
+    .post__text {
+        margin-top: 5px;
+        display: flex;
+        font-weight: normal;    /* This sets the font-weight to normal */
+        margin-left: 15px;  /* Add margin from inside the border of the container */
+        font-size: 14px;
+        
+        .post__username {
+            font-weight: 550;
+        }
+        
+        .post__caption {
+            margin-left: 5px;
+        }
+    }
+    
+    .post__numOfComments {
+        color: #8e8e8e;
+        font-size: 14px;
+        margin-left: 15px;
+        margin-top: 5px;
+    }
+    
+    .post__comments {
+        margin-top: 5px;
+        margin-left: 15px;
+        font-size: 14px;
+        
+        .post__commentUsername {
+            margin-right: 5px;
+            font-weight: 550;
+        }
+    }
+    
+    .post__commentBox {
+        display: flex;
+        margin-top: 15px;
+        
+        .post__input {
+            flex: 1;    /* Container Should Take maximum place in the Flex */
+            border: none;   /* No Border */
+            padding: 20px;   /* Add Margin From inside the boundary of Container */
+            border-top: 1px solid lightgray;    /* Top Border attributes */
+            
+            &::placeholder {
+                color: #cdc2c2;
+                font-size: 14px;
+            }
+        }
+        
+        .post__button {
+            flex: 0;    /* Container Should Take minimum place in the Flex */
+            border: none;   /* No Border */
+            color: #2079d35e;
+            background-color: transparent;  /* Background Transparent */
+            border-top: 1px solid lightgray;    /* Top Border attributes */
+            padding-right: 15px;
+            cursor: pointer;
+        }
+    }
+}
