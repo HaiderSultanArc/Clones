@@ -1,0 +1,72 @@
+.post {
+    background-color: white;
+    max-width: 610px;   /* This sets the maximum possible width of container on the screen */
+    border: 1px solid lightgray;    /* Adds a Border around the edges of the container */
+    margin-bottom: 60px;    /* Adds a margin at the bottom of the container */
+    border-radius: 0.5%;
+}
+
+.post__avatar {
+    size: 0px;
+    /*margin-right: 10px; /* This adds margin on the right side of the container */
+}
+
+.post__username {
+    margin-left: 20px;
+    font-weight: 550;
+    font-size: 14px;
+}
+
+.post__image {
+    width: 100%;    /* This make the width of container equal to the width of screen */
+    object-fit: contain;    /* This keeps the aspect-ration of the container, regardless of how large the parent div gets */
+    border-top: 1px solid lightgray;    /* Adds a Border on top edges of the container */
+    border-bottom: 1px solid lightgray; /* Adds a Border on bottom edges of the container */
+}
+
+.post__text {
+    font-weight: normal;    /* This sets the font-weight to normal */
+    padding-top: 20px;  /* Add margin from inside the border of the container */
+    padding-bottom: 20px;
+}
+
+.post__caption {
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.post__header {
+    display: flex;  /* This aligns all the components of the container in a Flex or so to say Row */
+    align-items: center;    /* This aligns all the components of the container at the center of the container */
+    padding-left: 20px;
+    padding: 10px;
+}
+
+.post__likes {
+    margin-left: 20px;
+}
+
+.post__commentBox {
+    display: flex;
+    margin-top: 10px;
+}
+
+.post__comments {
+    padding-left: 20px;
+}
+
+.post__input {
+    flex: 1;    /* Container Should Take maximum place in the Flex */
+    border: none;   /* No Border */
+    padding: 20px;   /* Add Margin From inside the boundary of Container */
+    border-top: 1px solid lightgray;    /* Top Border attributes */
+}
+
+.post__button {
+    flex: 0;    /* Container Should Take minimum place in the Flex */
+    border: none;   /* No Border */
+    color: #2079d35e;
+    background-color: transparent;  /* Background Transparent */
+    border-top: 1px solid lightgray;    /* Top Border attributes */
+    padding-right: 20px;
+}

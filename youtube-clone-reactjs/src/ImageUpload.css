@@ -1,0 +1,15 @@
+.imageupload {
+    display: flex;  /* Aligns everything in a Flex or Row */
+    flex-direction: column; /* Change the default direction of the Flex from Row to Column */
+    width: 60%; /* Sets the Width of the container */
+    margin-left: auto;  /* Detects margin on the left and align the content accordingly (Use with margin-right to center the content) */
+    margin-right: auto; /* Detects margin on the right and align the content accordingly (Use with margin-left to center the content) */
+    margin-top: 10px;   /* sets margin from top */
+    margin-bottom: 10px;    /* sets margin from top */
+    /* position: fixed;    /* Fix the Position of the Container on the Screen */
+    /* bottom: 0;  /* Sets the Position of the Container on the Screen */
+}
+
+.imageupload__progress {
+    width: 100%;    /* Sets the Width of the container */
+}
