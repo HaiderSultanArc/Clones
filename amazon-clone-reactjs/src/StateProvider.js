@@ -1,4 +1,4 @@
-import React, {createContext, useContext, useReducer} from 'react';
+import React, { createContext, useContext, useReducer } from 'react';
 
 export const StateContext = createContext();    // Creating an Empty Data-layer
 

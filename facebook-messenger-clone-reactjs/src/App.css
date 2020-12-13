@@ -1,40 +1,94 @@
+.message {
+  padding: 10px;
+  /* Adds margin from inside the boudary of the container to the content */
+  margin: 10px;
+  /* Adds a margin from outside the boudary of container to the other containers */
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  /* Sets the width of the Container to fit the content inside */
+}
+
+.message .message__userCard {
+  color: white !important;
+  /* forgroud color */
+  background-color: #0282FF !important;
+  text-align: left !important;
+  /* align the text to the left and it's important to follow */
+  border-radius: 25px !important;
+}
+
+.message .message__guestCard {
+  background-color: #e9e9eb !important;
+  border-radius: 25px !important;
+}
+
+.message__user {
+  margin-left: auto;
+  /* push the margin to the left */
+}
+
 * {
   margin: 0;
 }
 
-.App {
-  text-align: center; /* Aligns text in the center of container */
+.app {
+  text-align: center;
+  /* Aligns text in the center of container */
 }
 
-.app__icon {
-  position: relative; /* Sets the position of the container relative to others */
-  object-fit: contain;  /* Sets the object size to contain so that objects remains same size no matter whats the size of container */
-  margin: 20px; /* Adds margin from boudary of container to other containers */
+.app .app__icon {
+  position: relative;
+  /* Sets the position of the container relative to others */
+  -o-object-fit: contain;
+     object-fit: contain;
+  /* Sets the object size to contain so that objects remains same size no matter whats the size of container */
+  margin: 20px;
+  /* Adds margin from boudary of container to other containers */
 }
 
-.app__messagesArea {
-  margin-bottom: 160px; /* Adds margin from boudary of container to other containers */
+.app .app__messagesArea {
+  margin-bottom: 160px;
+  /* Adds margin from boudary of container to other containers */
 }
 
-.app__form {
-  padding: 20px;  /* Adding margin from inside of the border of container to the componenets of container */
-  position: fixed;  /* Fix the position of contianer in the parent contianer */
-  bottom: 0;  /* Sets the position of the container in the parent container */
-  z-index: 1; /* Sets the Z axis, basically tells to render it in front of contianers with lesser value of z-index */
-  width: 94%;  /* Sets width of the container to be 100% of the parent container */
-  background-color: #e9e9eb;  /* Set the background color of the container */
+.app .app__form {
+  padding: 20px;
+  /* Adding margin from inside of the border of container to the componenets of container */
+  position: fixed;
+  /* Fix the position of contianer in the parent contianer */
+  bottom: 0;
+  /* Sets the position of the container in the parent container */
+  z-index: 1;
+  /* Sets the Z axis, basically tells to render it in front of contianers with lesser value of z-index */
+  width: 94%;
+  /* Sets width of the container to be 100% of the parent container */
+  background-color: #e9e9eb;
+  /* Set the background color of the container */
   margin: 20px;
 }
 
-.app__formControl {
+.app .app__form .app__formControl {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
   display: flex !important;
-  flex-direction: row !important;
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: row !important;
+          flex-direction: row !important;
 }
 
-.app__iconButton {
-  flex: 0;  /* Sets precedence of the container in the parent flex container to be 0 (minimum) */
+.app .app__form .app__formControl .app__input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  /* Sets precedence of the container in the parent flex container to be 1 (maximum) */
 }
 
-.app__input {
-  flex: 1;  /* Sets precedence of the container in the parent flex container to be 1 (maximum) */
+.app .app__form .app__formControl .app__iconButton {
+  -webkit-box-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
+  /* Sets precedence of the container in the parent flex container to be 0 (minimum) */
 }
+/*# sourceMappingURL=App.css.map */

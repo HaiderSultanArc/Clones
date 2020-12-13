@@ -1,0 +1,12 @@
+@import "./Header";
+@import "./Product/Styles/Checkout";
+@import "./Login";
+@import "./Home";
+@import "./Product/Styles/Product";
+@import "./Product/Styles/CheckoutProduct";
+@import "./Product/Styles/Subtotal";
+
+
+* { /* Select everything on Screen */
+  margin: 0;  /* Set margin around the Container to 0 */
+}

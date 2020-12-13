@@ -1,8 +1,7 @@
-import React, {useState, useEffect} from 'react';
-import YouTube from 'react-youtube';
 import movieTrailer from 'movie-trailer';
-import axios from './axios';    // axios is the default export (instance) from the file axios.js
-import './Row.css';
+import React, { useEffect, useState } from 'react';
+import YouTube from 'react-youtube';
+import axios from './axios'; // axios is the default export (instance) from the file axios.js
 
 const base_url = "https://image.tmdb.org/t/p/original/";    // base_url for the images of the request that came back
 
@@ -38,19 +37,15 @@ function Row({title, fetchUrl, isLargeRow}) {   // De-structured props that were
             setTrailerUrl('');  // Set it to empty to stop the trailer
         }
         else {
-            console.log(movieTrailer(movie?.original_name || "")) // movieTrailer is a module of react-youtube, what it does is, it takes the movie name and find the youtube trailer of the movie
+            movieTrailer(movie?.name || "") // movieTrailer is a module of react-youtube, what it does is, it takes the movie name and find the youtube trailer of the movie
             .then(
                 (url) => {  // Pass in the full Url of the movie trailer
-                    console.log("URL: ", url);
                     const urlParams = new URLSearchParams(new URL(url).search);
-                    console.log("URL Params: ", urlParams);
                     setTrailerUrl(urlParams.get("v"));   // Pulling out the v part of the Url
-                    console.log("Trailer Url is", trailerUrl);
                 }
             )
             .catch(
                 (error) => console.log(error),
-                console.log("Error")
             );
         }
     };

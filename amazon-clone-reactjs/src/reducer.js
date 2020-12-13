@@ -14,7 +14,6 @@ const reducer = (state, action) => {
         case 'SET_USER':
             return {
                 ...state,   // current State
-                user: action.user // Set user to user in action
             }
             
         case 'ADD_TO_BASKET':

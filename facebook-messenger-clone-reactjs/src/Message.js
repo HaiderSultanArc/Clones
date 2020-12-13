@@ -1,6 +1,5 @@
-import { Card, CardContent, Typography } from '@material-ui/core'
-import React, { forwardRef, useEffect, useRef} from 'react'
-import './Message.css';
+import { Card, CardContent, Typography } from '@material-ui/core';
+import React, { forwardRef, useEffect, useRef } from 'react';
 
 const Message = forwardRef( // forwardRef is a higher order function, it just wraps what we already have with some additional functionalities, which in this case is ref (reference)
     ({fields, username}, ref) => {   // props that were passed to the component

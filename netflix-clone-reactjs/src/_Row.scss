@@ -1,0 +1,36 @@
+.row {
+    margin-left: 20px;  /* Add margin to the left of the container */
+    color: white;   /* Set foreground color of the container */
+    
+    .row__posters {
+        display: flex;  /* Change display of the container to the flex */
+        overflow-y: hidden;     /* If there's any overflowing part of the object in Y-Axis of the container just hide it */
+        overflow-x: scroll;     /* If there's any overflowing part of object in X-Axis of the container add a scroll bar */
+        padding: 20px;  /* Add margin from inside of the container boundary to the elements of the container */
+        scrollbar-width: none;  /* Set the width of scrollbar to none to hide it */
+        
+        &::-webkit-scrollbar {  /* Tell all the browsers to do this for the scrollbars */
+            display: none;  /* Change the display of the container to be none */
+        }
+        
+        .row__poster {
+            object-fit: contain;    /* Keep the aspect ratio of the objects inside the container regardless of size or shape of container */
+            width: 100%;    /* Set Width of container to the 100% of Screen */
+            max-height: 100px;  /* Set the maximum height of the container to be 100px */
+            margin-right: 10px;    /* Set the margin on right side of the container */
+            transition: transform 450ms;    /* Any time there's a change in state of the container, undergo a the change in appearance by taking a time of 450ms */
+            
+            &:hover {    /* Anytime the pointer hovers over the container */
+                transform: scale(1.08);     /* Change the scale of the container by 1.08 factor */
+            }
+        }
+        
+        .row__posterLarge {
+            max-height: 250px;      /* Set the maximum height of the container to be 100px */
+            
+            &:hover {   /* Anytime the pointer hovers over the container */
+                transform: scale(1.09);     /* Change the scale of the container by 1.09 factor */
+            }
+        }
+    }
+}

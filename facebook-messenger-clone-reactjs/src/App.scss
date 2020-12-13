@@ -1,0 +1,42 @@
+@import "./Message";
+
+* {
+  margin: 0;
+}
+
+.app {
+  text-align: center; /* Aligns text in the center of container */
+  
+  .app__icon {
+    position: relative; /* Sets the position of the container relative to others */
+    object-fit: contain;  /* Sets the object size to contain so that objects remains same size no matter whats the size of container */
+    margin: 20px; /* Adds margin from boudary of container to other containers */
+  }
+  
+  .app__messagesArea {
+    margin-bottom: 160px; /* Adds margin from boudary of container to other containers */
+  }
+  
+  .app__form {
+    padding: 20px;  /* Adding margin from inside of the border of container to the componenets of container */
+    position: fixed;  /* Fix the position of contianer in the parent contianer */
+    bottom: 0;  /* Sets the position of the container in the parent container */
+    z-index: 1; /* Sets the Z axis, basically tells to render it in front of contianers with lesser value of z-index */
+    width: 94%;  /* Sets width of the container to be 100% of the parent container */
+    background-color: #e9e9eb;  /* Set the background color of the container */
+    margin: 20px;
+    
+    .app__formControl {
+      display: flex !important;
+      flex-direction: row !important;
+      
+      .app__input {
+        flex: 1;  /* Sets precedence of the container in the parent flex container to be 1 (maximum) */
+      }
+      
+      .app__iconButton {
+        flex: 0;  /* Sets precedence of the container in the parent flex container to be 0 (minimum) */
+      }
+    }
+  }
+}

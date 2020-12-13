@@ -1,7 +1,219 @@
-* {   /* Applies to the whole screen */
-  margin: 0;  /* Removes all the margins around the container */
+.banner {
+  color: white;
+  /* Set a Color for forground of the container */
+  -o-object-fit: contain;
+     object-fit: contain;
+  /* Keep the aspect ratio of the objects inside the container regardless of size or shape of container */
+  height: 448px;
+  /* Set the height of the container */
+}
+
+.banner .banner__contents {
+  margin-left: 30px;
+  /* Add margin on left side of container */
+  padding-top: 140px;
+  /* Add margin from inside bottom the boundary of container to the content of the container */
+  height: 190px;
+  /* Set the height of the container */
+}
+
+.banner .banner__contents .banner__title {
+  font-size: 3rem;
+  /* Set size of Font */
+  font-weight: 800;
+  /* Set the weight of font */
+  padding-bottom: 0.3rem;
+  /* Add margin from inside bottom the boundary of container to the content of the container */
+}
+
+.banner .banner__contents .banner__button {
+  cursor: pointer;
+  /* Change cursor to the pointer in container */
+  color: #fff;
+  /* Set foreground color of the container */
+  outline: none;
+  /* Set outline of the Container to none to make them not visible */
+  border: none;
+  /* Set border of the Container to none to make them not visible */
+  font-weight: 700;
+  /* Set Font Weight of the Container */
+  border-radius: 0.2vw;
+  /* Set border radius of the Container to make them round */
+  padding-left: 2rem;
+  /* Add margin from inside left the boundary of container to the content of the container */
+  padding-right: 2rem;
+  /* Add margin from inside right the boundary of container to the content of the container */
+  padding-top: 0.5rem;
+  /* Add margin from inside top the boundary of container to the content of the container */
+  padding-bottom: 0.5rem;
+  /* Add margin from inside bottom the boundary of container to the content of the container */
+  margin-right: 1rem;
+  /* Add margin to the right of the Container */
+  background-color: rgba(51, 51, 51, 0.5);
+  /* Set Background Color of the Container */
+}
+
+.banner .banner__contents .banner__button:hover {
+  color: #000;
+  /* Set foreground color of the Container */
+  background-color: #e6e6e6;
+  /* Set background color of the Container */
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  /* Sets time of all the transitions to 0.2 sec */
+}
+
+.banner .banner__contents .banner__description {
+  width: 45rem;
+  /* Set width of Container */
+  line-height: 1.3;
+  /* Set height of the Line */
+  padding-top: 1rem;
+  /* Add margin from inside top the boundary of container to the content of the container */
+  font-size: 0.8rem;
+  /* Set size of Font */
+  max-width: 360px;
+  /* Set the max-width of the container */
+  height: 80px;
+  /* Set the height of the container */
+}
+
+.banner .banner__contents .banner--fadeBottom {
+  height: 7.4rem;
+  /* Set height of the container */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(rgba(37, 37, 37, 0.61)), to(#111));
+  background-image: linear-gradient(180deg, transparent, rgba(37, 37, 37, 0.61), #111);
+}
+
+.nav {
+  position: fixed;
+  /* Fix the position of the container on the screem */
+  top: 0;
+  /* Set position of the Container */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* Change display of Container to flex */
+  width: 100%;
+  /* Set width of container to be 100% of screen */
+  height: 30px;
+  /* Set height of the Container */
+  z-index: 1;
+  /* Set priority in Z-Axis */
+  padding: 20px;
+  /* Add margin from inside the boundary of container to the content of the container */
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  /* Justify content by spacing in between them */
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+  /* Handle the transition as ease-in */
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  /* Timing of all the transition on container */
+}
+
+.nav .nav__logo {
+  position: fixed;
+  /* Fix the position of the container on the screem */
+  left: 20px;
+  /* Set position of the Container */
+  width: 80px;
+  /* Set width of container to be 100% of screen */
+  -o-object-fit: contain;
+     object-fit: contain;
+  /* Keep the aspect ratio of the objects inside the container regardless of size or shape of container */
+}
+
+.nav .nav__avatar {
+  position: fixed;
+  /* Fix the position of the container on the screem */
+  right: 20px;
+  /* Set position of the Container */
+  width: 30px;
+  /* Set width of container to be 100% of screen */
+  -o-object-fit: contain;
+     object-fit: contain;
+  /* Keep the aspect ratio of the objects inside the container regardless of size or shape of container */
+}
+
+.nav__black {
+  background-color: #111;
+  /* Set background Color */
+}
+
+.row {
+  margin-left: 20px;
+  /* Add margin to the left of the container */
+  color: white;
+  /* Set foreground color of the container */
+}
+
+.row .row__posters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* Change display of the container to the flex */
+  overflow-y: hidden;
+  /* If there's any overflowing part of the object in Y-Axis of the container just hide it */
+  overflow-x: scroll;
+  /* If there's any overflowing part of object in X-Axis of the container add a scroll bar */
+  padding: 20px;
+  /* Add margin from inside of the container boundary to the elements of the container */
+  scrollbar-width: none;
+  /* Set the width of scrollbar to none to hide it */
+}
+
+.row .row__posters::-webkit-scrollbar {
+  /* Tell all the browsers to do this for the scrollbars */
+  display: none;
+  /* Change the display of the container to be none */
+}
+
+.row .row__posters .row__poster {
+  -o-object-fit: contain;
+     object-fit: contain;
+  /* Keep the aspect ratio of the objects inside the container regardless of size or shape of container */
+  width: 100%;
+  /* Set Width of container to the 100% of Screen */
+  max-height: 100px;
+  /* Set the maximum height of the container to be 100px */
+  margin-right: 10px;
+  /* Set the margin on right side of the container */
+  -webkit-transition: -webkit-transform 450ms;
+  transition: -webkit-transform 450ms;
+  transition: transform 450ms;
+  transition: transform 450ms, -webkit-transform 450ms;
+  /* Any time there's a change in state of the container, undergo a the change in appearance by taking a time of 450ms */
+}
+
+.row .row__posters .row__poster:hover {
+  /* Anytime the pointer hovers over the container */
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+  /* Change the scale of the container by 1.08 factor */
+}
+
+.row .row__posters .row__posterLarge {
+  max-height: 250px;
+  /* Set the maximum height of the container to be 100px */
+}
+
+.row .row__posters .row__posterLarge:hover {
+  /* Anytime the pointer hovers over the container */
+  -webkit-transform: scale(1.09);
+          transform: scale(1.09);
+  /* Change the scale of the container by 1.09 factor */
+}
+
+* {
+  /* Applies to the whole screen */
+  margin: 0;
+  /* Removes all the margins around the container */
 }
 
 .app {
   background-color: #111;
 }
+/*# sourceMappingURL=App.css.map */

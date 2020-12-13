@@ -1,3 +1,373 @@
-* { /* Select everything on Screen */
-  margin: 0;  /* Set margin around the Container to 0 */
+.header {
+  background-color: #131921;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* Algin all the items in the center of the of the Container */
+  position: -webkit-sticky;
+  position: sticky;
+  /* Stick at the positin on the Screen */
+  top: 0;
+  /* Position of the Container or screen */
+  z-index: 100;
 }
+
+.header .header__logo {
+  width: 100px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 18px;
+}
+
+.header .header__search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.header .header__search .header__searchInput {
+  height: 12px;
+  padding: 10px;
+  border: none;
+  width: 100%;
+}
+
+.header .header__search .header__searchIcon {
+  padding: 5px;
+  height: 22px !important;
+  background-color: #FFA336;
+}
+
+.header .header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  /* Evenly Space the Content of the Container */
+}
+
+.header .header__nav .header__link {
+  color: white;
+  text-decoration: none;
+  /* Removes all the decoration of the text in the Container */
+}
+
+.header .header__nav .header__link .header__option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.header .header__nav .header__link .header__option .header__optionLineOne {
+  font-size: 10px;
+}
+
+.header .header__nav .header__link .header__option .header__optionLineTwo {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.header .header__nav .header__link .header__optionBasket {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .header__nav .header__link .header__optionBasket .header__optionLineTwo {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.header .header__nav .header__link .header__optionBasket .header__basketCount {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.checkout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px;
+  background-color: white;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.checkout .checkout__ad {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.checkout .checkout__title {
+  margin-right: 10px;
+  padding: 10px;
+  border-bottom: 1px solid lightgray;
+}
+
+.login {
+  background-color: white;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login .login__logo {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.login .login__container {
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px;
+  border: 1px solid lightgray;
+}
+
+.login .login__container h1 {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.login .login__container p {
+  margin-top: 15px;
+  font-size: 12px;
+}
+
+.login .login__container form h5 {
+  margin-bottom: 5px;
+}
+
+.login .login__container form input {
+  height: 30px;
+  margin-bottom: 10px;
+  background-color: white;
+  width: 98%;
+}
+
+.login .login__container form .login__signInButton {
+  background-color: #FFA336;
+  border-radius: 2px;
+  width: 100%;
+  height: 30px;
+  border: 1px solid;
+  margin-top: 10px;
+  border-color: #a88734 #9c7e31 #846a29;
+}
+
+.login .login__container .login_registerButton {
+  border-radius: 2px;
+  width: 100%;
+  height: 30px;
+  border: 1px solid;
+  margin-top: 10px;
+  border-color: darkgray;
+}
+
+.home {
+  max-width: 1500px;
+  /* Sets the Maximum Possible width of the Container */
+  margin-left: auto;
+  /* Automatically margin from the Left */
+  margin-right: auto;
+  /* Automatically margin from the Right */
+}
+
+.home .home__image {
+  width: 100%;
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0)));
+  -webkit-mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
+          mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0)));
+          mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
+  /* Adds a Mask on Image that is a Gredient from top to bottom with two provided colors */
+  z-index: -1;
+  margin-bottom: -150px;
+  /* Dedecting the margin of the Container */
+}
+
+.home .home__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 1;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* Align all the content in the container at the center */
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  /* Justify content at End of the Flex */
+  margin: 10px;
+  padding: 20px;
+  width: 100%;
+  max-height: 400px;
+  min-width: 100px;
+  background-color: white;
+  z-index: 1;
+}
+
+.product .product__info {
+  height: 100px;
+  margin-bottom: 15px;
+}
+
+.product .product__price {
+  margin-top: 5px;
+}
+
+.product .product__rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.product img {
+  /* img Child of a Parent Container with class product */
+  max-height: 200px;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.product button {
+  background-color: #FFA336;
+  border: 1px solid;
+  border-color: #a88734 #9c7e31 #846a29;
+}
+
+.checkoutProduct {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: white;
+  padding: 20px;
+}
+
+.checkoutProduct .checkoutProduct__image {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 180px;
+  height: 180px;
+}
+
+.checkoutProduct .checkoutProduct__info {
+  padding-left: 20px;
+}
+
+.checkoutProduct .checkoutProduct__info .checkoutProduct__title {
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.checkoutProduct .checkoutProduct__info .checkoutProduct__rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.checkoutProduct .checkoutProduct__info button {
+  background-color: #FFA336;
+  border: 1px solid;
+  margin-top: 10px;
+  border-color: #a88734 #9c7e31 #846a29;
+  color: #111;
+}
+
+.subtotal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 300px;
+  height: 100px;
+  padding: 20px;
+  background-color: #f3f3f3;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+}
+
+.subtotal .subtotal__gift {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.subtotal .subtotal__gift input {
+  margin-right: 5px;
+}
+
+.subtotal .subtotal__gift button {
+  background-color: #FFA336;
+  border-radius: 2px;
+  width: 100%;
+  height: 30px;
+  border: 1px solid;
+  margin-top: 10px;
+  border-color: #a88734 #9c7e31 #846a29;
+  color: #111;
+}
+
+* {
+  /* Select everything on Screen */
+  margin: 0;
+  /* Set margin around the Container to 0 */
+}
+/*# sourceMappingURL=App.css.map */

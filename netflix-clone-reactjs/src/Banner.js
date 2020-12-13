@@ -1,7 +1,6 @@
-import React, {useState, useEffect} from 'react'
-import axios from './axios';    // axios is the default export (instance) from the file axios.js
+import React, { useEffect, useState } from 'react';
+import axios from './axios'; // axios is the default export (instance) from the file axios.js
 import requests from "./requests";
-import './Banner.css';
 
 function Banner() {
     const [movie, setMovie] = useState([]);

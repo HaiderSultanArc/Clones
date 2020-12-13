@@ -1,13 +1,11 @@
 import React from 'react';
-import "./Home.css";
-import Product from './Product';
+import Product from './Product/JS/Product';
 
 function Home() {
     return (
         <div className="home">
             
-            <img className="home__image" src="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg" alt="Backgorund Image" />
-
+            <img className="home__image" src="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg" alt="Backgorund" />
 
             <div className="home__row">
                 <Product id="12321341" title="Gskyer Telescope, 70mm Aperture 400mm AZ Mount Astronomical Refracting Telescope for Kids Beginners - Travel Telescope with Carry Bag, Phone Adapter and Wireless Remote" price={129.96} rating={5} image="https://m.media-amazon.com/images/I/81nUym12AOL._AC_UY218_.jpg" />
