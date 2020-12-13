@@ -1,54 +1,243 @@
-* {
-  margin: 0 /* Sets the margin */
+.videoCard {
+  width: 270px;
+  margin-bottom: 40px;
 }
 
-.app {
-  background-color: #fafafa;  /* This sets the background of the container*/
-  /* height: 100vh; /* This means that the height of this container is 100% of the viewport height, it basically expands the container in all the available space on page */
+.videoCard .videoCard__thumbnail {
+  height: 140px;
+  width: 250px;
 }
 
-.app__header {
-  position: sticky; /* It sticks the Position of the Container */
-  top: 0; /* Position of the Container on the Screen */
-  z-index: 1;
-  background-color: white;  /* Adds a Border around the edges of the container */
-  padding-top: 12px;      /* Add margin from inside the border of the container */
-  padding-bottom: 4px;
-  padding-left: 164px;
-  padding-right: 164px;
-  border-bottom: 1px solid lightgray;
-  object-fit: contain;  /* This keeps the aspect-ration of the container, regardless of how large the parent div gets */
-  display: flex;  /* It will align everything of the container in a Flex or so to say a Row */
-  justify-content: space-between; /* Space between all the Elements */
-}
-
-.app__headerImage {
-  object-fit: contain;  /* This keeps the aspect-ration of the container, regardless of how large the parent div gets */
-  /*margin-left: 200px;*/
-}
-
-.app__posts {
-  padding: 20px;  /* Add margin from inside the border of the container */
-  display: flex;  /* It will align everything of the container in a Flex or so to say a Row */
-  justify-content: center;  /* Justify the content to the center */
-}
-
-.app__postsRight {
-  margin-left: 30px;
-  padding: 20px;
-  max-width: 280px;
-}
-
-.app__user {
+.videoCard .videoCard__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  margin-top: 10px;
+  padding-right: 30px;
 }
 
-.app__userButton {
-  margin-left: 80px;
+.videoCard .videoCard__info .videoCard__avatar {
+  height: 30px !important;
+  width: 30px !important;
 }
 
-.app__signup {
-  display: flex;  /* It will align everything of the container in a Flex or so to say a Row */
-  flex-direction: column; /* It will change the direction of the Flex to the Column, so everthing in the Container will be aligned in a Column */
+.videoCard .videoCard__info .videoCard__text {
+  margin-left: 15px;
 }
+
+.videoCard .videoCard__info .videoCard__text h4 {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.videoCard .videoCard__info .videoCard__text p {
+  font-size: 14px;
+  color: gray;
+}
+
+.recommendedVideos {
+  -webkit-box-flex: 0.8;
+      -ms-flex: 0.8;
+          flex: 0.8;
+  /* Take 80% of Parent Flex */
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+}
+
+.recommendedVideos h2 {
+  margin-left: 5px;
+  margin-bottom: 20px;
+}
+
+.recommendedVideos .recommendedVideos__videos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.sidebar {
+  -webkit-box-flex: 0.2;
+      -ms-flex: 0.2;
+          flex: 0.2;
+  /* Take 20% of Parent Flex */
+}
+
+.sidebar hr {
+  height: 1px;
+  border: 0;
+  background-color: lightgray;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.sidebarRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 20px;
+}
+
+.sidebarRow:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+.sidebarRow:hover .sidebarRow__icon {
+  color: red;
+}
+
+.sidebarRow:hover .sidebarRow__title {
+  font-weight: bold;
+}
+
+.sidebarRow .selected {
+  background-color: lightgray;
+}
+
+.sidebarRow .selected .sidebarRow__icon {
+  color: red;
+}
+
+.sidebarRow .selected .sidebarRow__title {
+  font-weight: bold;
+}
+
+.sidebarRow .sidebarRow__icon {
+  color: #606060;
+  font-size: large !important;
+}
+
+.sidebarRow .sidebarRow__title {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-left: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.searchPage {
+  -webkit-box-flex: 0.8;
+      -ms-flex: 0.8;
+          flex: 0.8;
+  background-color: #f9f9f9;
+  padding: 20px 20px;
+}
+
+.searchPage .searchPage__filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #606060;
+  font-size: xx-small !important;
+}
+
+.searchPage .searchPage__filter h2 {
+  margin-left: 10px;
+}
+
+.searchPage hr {
+  height: 1px;
+  border: 0;
+  background-color: lightgray;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.channelRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 70%;
+}
+
+.channelRow .channelRow__logo {
+  height: 120px !important;
+  width: 120px !important;
+  margin: 10px 60px;
+}
+
+.channelRow .channelRow__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.channelRow .channelRow__text h4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.channelRow .channelRow__text p {
+  color: #606060;
+  font-size: small !important;
+}
+
+.videoRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 30px;
+  max-width: 700px;
+}
+
+.videoRow img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 246px;
+  height: 138px;
+}
+
+.videoRow .videoRow__text {
+  margin-left: 14px;
+}
+
+.videoRow .videoRow__headline {
+  font-size: 12px;
+  color: gray;
+}
+
+.videoRow .videoRow__headline .videoRow__subs {
+  background-color: lightgray;
+  padding: 2px;
+}
+
+.videoRow .videoRow__headline .videoRow__subs .videoRow__subsNumber {
+  font-weight: bolder;
+  color: #549dd3;
+}
+
+.videoRow .videoRow__description {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #606060;
+}
+
+.app__page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/*# sourceMappingURL=App.css.map */

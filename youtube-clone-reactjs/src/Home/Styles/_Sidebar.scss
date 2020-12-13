@@ -1,0 +1,11 @@
+.sidebar {
+    flex: 0.2;      /* Take 20% of Parent Flex */
+    
+    hr {
+        height: 1px;
+        border: 0;
+        background-color: lightgray;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}

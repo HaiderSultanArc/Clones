@@ -1,0 +1,11 @@
+@import "./Video/Styles/VideoCard";
+@import "./Home/Styles/RecommendedVideos";
+@import "./Home/Styles/Sidebar";
+@import "./Home/Styles/SidebarRow";
+@import "./Search/Styles/SearchPage";
+@import "./Search/Styles/ChannelRow";
+@import "./Search/Styles/VideoRow";
+
+.app__page {
+  display: flex;
+}
