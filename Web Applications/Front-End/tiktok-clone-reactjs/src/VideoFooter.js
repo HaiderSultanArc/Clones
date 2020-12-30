@@ -4,8 +4,12 @@ import "./VideoFooter.css";
 function VideoFooter() {
     return (
         <div className="videoFooter">
-            <h2>I am a footer</h2>
+            <div className="videoFooter__text">
+                <h3>@HaiderSultanArc</h3>
+                <p>this is a description</p>
+            </div>
             
+            <img className="videoFooter__record" src="https://static.thenounproject.com/png/934821-200.png" alt="" />
         </div>
     )
 }

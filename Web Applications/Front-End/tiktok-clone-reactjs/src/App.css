@@ -12,10 +12,10 @@ html {
 .app__videos {
   position: relative;
   border-radius: 20px;
-  height: 650px;
+  height: 550px;
   overflow: scroll;
   width: 80%;
-  max-width: 500px;
+  max-width: 300px;
   scroll-snap-type: y mandatory;  /* Mandatory the y scoll snapping */
   scrollbar-width: none;
 }
