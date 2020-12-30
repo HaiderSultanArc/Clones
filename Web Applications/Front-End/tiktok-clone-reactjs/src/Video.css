@@ -1,0 +1,14 @@
+.video {
+    position: relative;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: start;   /* Set the scrolling snap align to be the start of this contianer */
+}
+
+.video__player {
+    background-color: rgb(82, 82, 82);
+    object-fit: fill;
+    height: 100%;
+    width: 100%;
+}
