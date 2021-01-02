@@ -3,7 +3,7 @@ import './Video.css';
 import VideoFooter from './VideoFooter';
 import VideoSidebar from './VideoSidebar';
 
-function Video() {
+function Video({ url, channel, description, song, likes, messages, shares }) {
     const [playing, setPlaying] = useState(false);
     const videoRef = useRef(null);  // Reference to the Video
     
@@ -24,14 +24,14 @@ function Video() {
                 loop
                 ref={videoRef}
                 onClick={onVideoPress}
-                src="C:/Users/Maham/Documents/HS/Web Development/tiktoc-clone-reactjs/src/testVideo.mp4"
+                src={url}
                 type="video/mp4"
             >        
             </video>
             
-            <VideoFooter channel="HaiderSultanArc" description="Testing Tiktok Clone" song="Test Song for Tiktok Clone" />
+            <VideoFooter channel={channel} description={description} song={song} />
             
-            <VideoSidebar likes={111} messages={222} shares={333} />
+            <VideoSidebar likes={likes} messages={messages} shares={shares} />
         </div>
     )
 }
